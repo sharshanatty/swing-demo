@@ -8,8 +8,10 @@
  */
 
 // Apply the java plugin to add support for Java
-apply plugin: 'java'
-apply plugin: 'edu.sc.seis.launch4j'
+plugins {
+  id 'java'
+  id 'edu.sc.seis.launch4j' version '2.5.1'
+}
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -28,15 +30,6 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.11'
-}
-
-buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath 'edu.sc.seis.launch4j:launch4j:2.5.1'
-  }
 }
 
 launch4j {
