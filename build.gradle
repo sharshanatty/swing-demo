@@ -30,11 +30,6 @@ dependencies {
     testCompile 'junit:junit:4.11'
 }
 
-launch4j {
-  mainClassName = 'com.example.myapp.Start'
-  icon = "${projectDir}/icons/myApp.ico"
-}
-
 buildscript {
   repositories {
     jcenter()
@@ -45,8 +40,5 @@ buildscript {
 }
 
 launch4j {
-    outfile = 'TestMain.exe'
-    mainClassName = project.mainClassName
-    copyConfigurable = []
-    jarTask = project.tasks.shadowJar
+    mainClassName = 'SwingDemo'
 }
